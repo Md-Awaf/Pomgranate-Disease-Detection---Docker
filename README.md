@@ -16,7 +16,7 @@ The core application is a **Pomegranate Disease Detection System** that uses Dee
 
 The system follows a microservices architecture layout.
 
-![Pomegranate System Architecture](file:///C:/Users/mdawa/.gemini/antigravity/brain/31ad4e87-3b3f-4e04-8c49-0b82bcb30d4b/architecture_diagram_1767258274867.png)
+![Pomegranate System Architecture](architecture_diagram.png)
 
 The system is composed of the following containerized services:
 
