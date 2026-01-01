@@ -1,0 +1,12 @@
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db
+.docker/
+db_data/
+ml_service/data/
+uploads/
+*.log
+modelpath.txt
+*.h5

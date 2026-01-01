@@ -1,0 +1,62 @@
+services:
+  web:
+    build: ./web
+    ports:
+      - "5000:5000"
+    environment:
+      - ML_SERVICE_URL=http://ml:8000/predict
+      - ANALYTICS_SERVICE_URL=http://analytics:8002
+      - ADMIN_SECRET=supersecretadmin
+      - FLASK_ENV=development
+    volumes:
+      - web_uploads:/app/uploads
+    depends_on:
+      - ml
+      - analytics
+
+  ml:
+    build: ./ml
+    ports:
+      - "8000:8000"
+    environment:
+      - ANALYTICS_SERVICE_URL=http://analytics:8002
+    volumes:
+      - ml_data:/app/data
+
+  analytics:
+    build: ./analytics
+    ports:
+      - "8002:8002"
+    environment:
+      - DATABASE_URL=postgresql://pom_user:pom_password@postgres:5432/pom_analytics
+    depends_on:
+      - postgres
+
+  postgres:
+    image: postgres:15
+    environment:
+      POSTGRES_USER: pom_user
+      POSTGRES_PASSWORD: pom_password
+      POSTGRES_DB: pom_analytics
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+  grafana:
+    image: grafana/grafana:latest
+    ports:
+      - "3000:3000"
+    environment:
+      - GF_SECURITY_ADMIN_PASSWORD=admin
+    volumes:
+      - grafana_data:/var/lib/grafana
+      - ./grafana/provisioning:/etc/grafana/provisioning
+    depends_on:
+      - postgres
+
+volumes:
+  web_uploads:
+  ml_data:
+  postgres_data:
+  grafana_data:

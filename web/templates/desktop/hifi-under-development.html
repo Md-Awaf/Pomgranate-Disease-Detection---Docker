@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/hglobal.css') }}" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/hifi-under-development.css') }}" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" />
+</head>
+
+<body>
+  <div class="hifi-under-development">
+    <header class="menu6">
+      <div class="logo-parent2">
+        <img class="logo-icon12" loading="lazy" alt="" src="{{ url_for('static', filename='public/logo@2x.png') }}" />
+
+        <div class="pomogranate-analyzer12">
+          <p class="pomogranate12">Pomogranate</p>
+          <p class="analyzer12">Analyzer</p>
+        </div>
+      </div>
+      <nav class="frame-nav">
+        <div class="menu-item16">
+          <div class="item18" onclick="window.location.href='/'">Home</div>
+        </div>
+        <div class="menu-item17">
+          <div class="item17" onclick="window.location.href='/detect'">Detect</div>
+        </div>
+        <div class="menu-item18">
+          <div class="item16">Info</div>
+        </div>
+        <div class="menu-item19">
+          <div class="item19" onclick="window.location.href='/help'">Help</div>
+        </div>
+      </nav>
+    </header>
+    <section class="hifi-under-development-inner">
+      <div class="frame-parent13">
+        <div class="frame-wrapper14">
+          <div class="frame-parent14">
+            <div class="frame-parent15">
+              <div class="frame-wrapper15">
+                <div class="webpage-is-parent">
+                  <h1 class="webpage-is">WebPAGE is</h1>
+                  <h1 class="under-construction">
+                    <p class="under">Under</p>
+                    <p class="construction">construction</p>
+                  </h1>
+                </div>
+              </div>
+              <h3 class="this-webpage-is-container">
+                <p class="this-webpage-is">
+                  This Webpage is still under development. Stick around to see
+                  the amazing webpage.
+                </p>
+                <p class="sorry-for-your">Sorry for your inconvenience.</p>
+              </h3>
+            </div>
+            <button class="detect-now2" id="detectNow">
+              <div class="go-to-homepage">Go to Homepage</div>
+            </button>
+          </div>
+        </div>
+        <img class="ai-3-1" loading="lazy" alt=""
+          src="{{ url_for('static', filename='public/2431421ai-3-1@2x.png') }}" />
+      </div>
+    </section>
+    <footer class="frame-footer">
+      <div class="footer7"></div>
+      <div class="frame-child8"></div>
+      <div class="frame-parent16">
+        <div class="logo-wrapper1">
+          <div class="logo8">
+            <img class="logo-icon13" loading="lazy" alt="" src="./public/logo-1@2x.png" />
+
+            <div class="pomogranate-analyzer-wrapper1">
+              <div class="pomogranate-analyzer13">
+                <p class="pomogranate13">Pomogranate</p>
+                <p class="analyzer13">Analyzer</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="pomegranate-disease-detection-parent1">
+          <h3 class="pomegranate-disease-detection4">
+            Pomegranate Disease Detection
+          </h3>
+          <div class="effective-disease-detection-in-frame">
+            <div class="effective-disease-detection4">
+              Effective Disease Detection in Pomegranate using CNN and LSTM
+              method.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="frame-wrapper16">
+        <div class="main-links-container">
+          <h3 class="main-links4">Main Links</h3>
+          <div class="frame-parent17">
+            <div class="home-wrapper2">
+              <div class="home5">Home</div>
+            </div>
+            <div class="detect4">Detect</div>
+            <div class="history4">History</div>
+            <div class="about4">About</div>
+          </div>
+        </div>
+      </div>
+
+    </footer>
+  </div>
+
+  <script>
+    var detectNow = document.getElementById("detectNow");
+    if (detectNow) {
+      detectNow.addEventListener("click", function (e) {
+        window.location.href = "./";
+      });
+    }
+  </script>
+</body>
+
+</html>

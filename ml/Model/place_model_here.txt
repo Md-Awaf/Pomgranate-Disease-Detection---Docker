@@ -1,0 +1,7 @@
+This directory is intended to store the Machine Learning model file.
+
+1. Obtain your trained YOLO/Keras/TensorFlow model (e.g., `model.h5`).
+2. Rename it to `model.h5` (or update `ml/main.py` to match your filename).
+3. Place the file in this directory: `ml/Model/model.h5`.
+
+Note: `*.h5` files are ignored by git to keep the repository lightweight.
